@@ -91,6 +91,7 @@
 			<artifactId>javax.inject</artifactId>
 			<version>1</version>
 		</dependency>
+		
 
 		<!-- Servlet -->
 		<dependency>
@@ -171,6 +172,13 @@
 			<version>4.3.8.RELEASE</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.22</version>
+			<scope>provided</scope>
+		</dependency>
+
 
 
 	</dependencies>

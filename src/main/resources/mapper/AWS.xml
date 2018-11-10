@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bdi.sp.AWS">
+	<select id="selectAWSList" resultType="aws">
+		select * from aws_test
+	</select>
+	<select id="selectAWS" parameterType="int" resultType="aws">
+		select * from aws_test
+		where atnum =#{atnum}
+	</select>
+	<insert id="insertAWS">
+		insert into aws_Test(atname,atage)
+		values(#{atname},#{atage})
+	</insert>
+	<update id="updateAWS">
+		update * from aws_test
+		
+		<set> 
+		<if test="atname!= null">atname=#{atname},</if>
+		<if test="atage!= null">atage=#{atage}</if>
+		</set>
+		where atnum=#{atnum}
+	</update>
+	<delete id="deleteAWS">
+		delete * from aws_test
+		where atnum =#{atnum}
+	</delete>
+	
+</mapper>
